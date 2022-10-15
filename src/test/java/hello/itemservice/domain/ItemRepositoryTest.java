@@ -72,7 +72,9 @@ class ItemRepositoryTest {
         //둘 다 없음 검증
         test(null, null, item1, item2, item3);
         test("", null, item1, item2, item3);
-
+        //만약 둘 다 넣지 않는다면 3개가 다 조회가 되는지 확인
+        //순서도 맞아야 함
+        
         //itemName 검증
         test("itemA", null, item1, item2);
         test("temA", null, item1, item2);
