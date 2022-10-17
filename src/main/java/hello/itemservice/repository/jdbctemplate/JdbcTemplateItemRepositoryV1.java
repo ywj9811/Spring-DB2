@@ -75,7 +75,7 @@ public class JdbcTemplateItemRepositoryV1 implements ItemRepository {
         String itemName = cond.getItemName();
         Integer maxPrice = cond.getMaxPrice();
 
-        String sql = "select id, item_name, price, quantity from item where id=?";
+        String sql = "select id, item_name, price, quantity from item";
 
         //동적 쿼리 -> jdbc를 사용하면 매우 복잡!
         if (StringUtils.hasText(itemName) || maxPrice != null) {
