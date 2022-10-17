@@ -68,8 +68,6 @@ public class JdbcTemplateItemRepositoryV1 implements ItemRepository {
         }
     }
 
-
-
     @Override
     public List<Item> findAll(ItemSearchCond cond) {
         String itemName = cond.getItemName();
