@@ -4,6 +4,7 @@ import hello.itemservice.repository.ItemRepository;
 import hello.itemservice.repository.ItemSearchCond;
 import hello.itemservice.repository.ItemUpdateDto;
 import hello.itemservice.repository.memory.MemoryItemRepository;
+import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -22,6 +23,7 @@ import static org.assertj.core.api.Assertions.assertThat;
  * @Transaction 이 테스트에 있으면 자동으로 트랜잭션을 사용하고 커밋이 아닌 롤백을 시켜준다.
  */
 @Transactional
+@Slf4j
 @SpringBootTest //itemServiceApplication에 가서 설정을 찾아 주입을 한다.
 class ItemRepositoryTest {
 
@@ -62,6 +64,7 @@ class ItemRepositoryTest {
 
         //then
         Item findItem = itemRepository.findById(item.getId()).get();
+        log.info("발견 = {}",findItem);
         assertThat(findItem).isEqualTo(savedItem);
     }
 
