@@ -23,9 +23,13 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 
 	//JdbcTemplate 추가
-	implementation 'org.springframework.boot:spring-boot-starter-jdbc'
+//	implementation 'org.springframework.boot:spring-boot-starter-jdbc'
+//	JdbcTemplate는 JPA에 함께 들어있기 때문에 없애도 됨(MyBatis에도 들어있을 것임)
 	//MyBatis 추가
 	implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:2.2.2'
+	//JPA, 스프링 데이터 JPA 추가
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+
 	//H2 데이터베이스 추가
 	runtimeOnly 'com.h2database:h2'
 
