@@ -8,6 +8,9 @@ group = 'com.example'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '11'
 
+ext["hibernate.version"] = "5.6.5.Final"
+//버그가 있어서 5.6.7버전에서 5.6.5버전으로 낮춤 (github 피셜 버그있다고 함)
+
 configurations {
 	compileOnly {
 		extendsFrom annotationProcessor
