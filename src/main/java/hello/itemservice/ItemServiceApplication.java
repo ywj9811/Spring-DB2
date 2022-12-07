@@ -13,7 +13,8 @@ import org.springframework.context.annotation.Profile;
 //@Import(MyBatisConfig.class)
 //@Import(JpaConfig.class)
 //@Import(SpringDataJpaConfig.class)
-@Import(QuerydslConfig.class)
+//@Import(QuerydslConfig.class)
+@Import(DirectConfig.class)
 @SpringBootApplication(scanBasePackages = "hello.itemservice.web") //componentscan 범위 설정
 public class ItemServiceApplication {
 
