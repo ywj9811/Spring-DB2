@@ -12,7 +12,8 @@ import org.springframework.context.annotation.Profile;
 @Slf4j
 //@Import(MyBatisConfig.class)
 //@Import(JpaConfig.class)
-@Import(SpringDataJpaConfig.class)
+//@Import(SpringDataJpaConfig.class)
+@Import(QuerydslConfig.class)
 @SpringBootApplication(scanBasePackages = "hello.itemservice.web") //componentscan 범위 설정
 public class ItemServiceApplication {
 
